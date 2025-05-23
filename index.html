@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Check.it</title>
+</head>
+
+<body>
+<div class="main-container">
+  
+<!--Filtros-->
+<div class="filters">
+  <select id="filterStatus">
+    <option value="all">Todas</option>
+    <option value="completed">Concluídas</option>
+    <option value="pending">Pendentes</option>
+  </select>
+
+  <select id="sortOption">
+    <option value="date">Ordenar por data</option>
+    <option value="priority">Ordenar por prioridade</option>
+  </select>
+</div>
+
+<!--Contador-->
+<div class="summary">
+    <span id="task-count"></span>
+</div>
+
+<!--Container da To-do-->
+<div class="todo-container">
+    <h1>Check.it</h1>
+    <p>Organize suas tarefas com clareza e leveza!</p>
+
+<div class="todo-input-container">
+    <input type="text" id="task-input" placeholder="Insira sua tarefa">
+    <input type="date" id="date-input">
+  <select id="priority-select">
+    <option value="1">Prioridade 1 (Alta)</option>
+    <option value="2">Prioridade 2 (Média)</option>
+    <option value="3">Prioridade 3 (Baixa)</option>
+  </select>
+  <button onclick="addTask()">Incluir</button>
+  </div>
+</div>
+  
+<ul id="task-list"></ul>
+
+<button id="clearAll" onclick="clearAll()">Apagar Tudo</button>
+</div>
+
+<script src="scripts.js"></script>
+</body>
